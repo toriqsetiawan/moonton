@@ -34,15 +34,22 @@ Route::prefix('prototype')->name('prototype.')->group(function() {
     Route::get('login', function() {
         return Inertia::render('Prototype/Login');
     })->name('login');
+
     Route::get('register', function() {
         return Inertia::render('Prototype/Register');
     })->name('register');
+
     Route::get('dashboard', function() {
         return Inertia::render('Prototype/Dashboard');
     })->name('dashboard');
+
     Route::get('subscription', function() {
         return Inertia::render('Prototype/Subscription');
     })->name('subscription');
+
+    Route::get('movie/{slug}', function() {
+        return Inertia::render('Prototype/Movie/Show');
+    })->name('movie.show');
 });
 
 require __DIR__.'/auth.php';
