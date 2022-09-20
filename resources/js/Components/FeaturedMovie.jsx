@@ -26,7 +26,7 @@ export default function FeaturedMovie({
                     <span className="text-sm font-medium text-white mt-1">{rating.toFixed(1)}/5.0</span>
                 </div>
             </div>
-            <div className="absolute bottom-0 h-[100px] left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
             rounded-br-[28px] flex justify-between items-center px-7 h-[130px]">
                 <div>
                     <div className="font-medium text-[22px] text-white">{name}</div>
