@@ -29,15 +29,25 @@ export default function Index({ auth, flashMessage, movies }) {
                     {movies.map((movie, index) => (
                         <tr key={movie.id}>
                             <td>
-                                <img src={`/storage/${movie.thumbnail}`} className="w-32 rounded-md" />
+                                <img
+                                    src={`/storage/${movie.thumbnail}`}
+                                    className="w-32 rounded-md"
+                                />
                             </td>
                             <td>{movie.name}</td>
                             <td>{movie.category}</td>
                             <td>{movie.rating.toFixed(1)}</td>
                             <td>
-                                <Button type="button" variant="warning">
-                                    Edit
-                                </Button>
+                                <Link
+                                    href={route(
+                                        "admin.dashboard.movie.edit",
+                                        movie.id
+                                    )}
+                                >
+                                    <Button type="button" variant="warning">
+                                        Edit
+                                    </Button>
+                                </Link>
                             </td>
                             <td>
                                 <Button type="button" variant="danger">
