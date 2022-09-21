@@ -13,8 +13,11 @@ class MovieController extends Controller
 {
     public function index()
     {
+        $movies = Movie::all();
+
         return Inertia::render(
-            'Admin/Movie/Index'
+            'Admin/Movie/Index',
+            compact('movies')
         );
     }
 
