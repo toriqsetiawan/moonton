@@ -1,9 +1,13 @@
 import { Link } from "@inertiajs/inertia-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Topbar(props) {
     const [dropdownOpen, setdropdownOpen] = useState(true);
     const dropdownTarget = useRef();
+
+    useEffect(() => {
+        dropdownTarget.current.classList.add("hidden");
+    }, [])
 
     const triggerDropdown = () => {
         if (dropdownOpen) {
@@ -37,7 +41,7 @@ export default function Topbar(props) {
                         />
                     </div>
                     <div
-                        className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
+                        className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] overflow-hidden"
                         ref={dropdownTarget}
                     >
                         <a

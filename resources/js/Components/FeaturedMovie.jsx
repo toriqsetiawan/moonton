@@ -18,7 +18,7 @@ export default function FeaturedMovie({
 }) {
     return (
         <div className="absolute overflow-hidden group mr-[30px]">
-            <img src={thumbnail}
+            <img src={`/storage/${thumbnail}`}
                 className="object-cover rounded-[30px] w-[520px] h-[340px]" alt="" />
             <div className="rating absolute top-0 left-0">
                 <div className="p-[30px] flex items-center gap-1">
@@ -26,7 +26,7 @@ export default function FeaturedMovie({
                     <span className="text-sm font-medium text-white mt-1">{rating.toFixed(1)}/5.0</span>
                 </div>
             </div>
-            <div className="absolute bottom-0 h-[100px] left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black rounded-bl-[28px]
             rounded-br-[28px] flex justify-between items-center px-7 h-[130px]">
                 <div>
                     <div className="font-medium text-[22px] text-white">{name}</div>
