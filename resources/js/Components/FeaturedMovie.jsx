@@ -18,7 +18,7 @@ export default function FeaturedMovie({
 }) {
     return (
         <div className="absolute overflow-hidden group mr-[30px]">
-            <img src={thumbnail}
+            <img src={`/storage/${thumbnail}`}
                 className="object-cover rounded-[30px] w-[520px] h-[340px]" alt="" />
             <div className="rating absolute top-0 left-0">
                 <div className="p-[30px] flex items-center gap-1">
