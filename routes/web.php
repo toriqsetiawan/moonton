@@ -46,6 +46,8 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.dashboar
     Route::resource('movie', AdminMovieController::class);
 });
 
+Route::post('midtrans/notification', [SubscriptionController::class, 'midtransCallback']);
+
 Route::prefix('prototype')->name('prototype.')->group(function() {
     Route::get('login', function() {
         return Inertia::render('Prototype/Login');
